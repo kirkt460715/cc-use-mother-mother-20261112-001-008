@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "facilities": [
+    {
+      "id": "a",
+      "county": "east",
+      "stage": "acute",
+      "name": "Synthetic a"
+    },
+    {
+      "id": "r",
+      "county": "east",
+      "stage": "rehab",
+      "name": "Synthetic r"
+    },
+    {
+      "id": "h",
+      "county": "east",
+      "stage": "home",
+      "name": "Synthetic h"
+    },
+    {
+      "id": "p",
+      "county": "west",
+      "stage": "primary",
+      "name": "Synthetic p"
+    }
+  ],
+  "people": [
+    {
+      "id": "p1",
+      "county": "east",
+      "age_band": "older",
+      "rural": false
+    },
+    {
+      "id": "p2",
+      "county": "east",
+      "age_band": "adult",
+      "rural": false
+    },
+    {
+      "id": "p3",
+      "county": "east",
+      "age_band": "older",
+      "rural": false
+    },
+    {
+      "id": "p4",
+      "county": "west",
+      "age_band": "adult",
+      "rural": true
+    },
+    {
+      "id": "p5",
+      "county": "west",
+      "age_band": "older",
+      "rural": true
+    }
+  ],
+  "visits": [
+    {
+      "id": "v1",
+      "person": "p1",
+      "facility": "a",
+      "admitted": "2026-11-01",
+      "discharged": "2026-11-03",
+      "outcome": "transfer",
+      "recorded": "2026-11-03"
+    },
+    {
+      "id": "v2",
+      "person": "p1",
+      "facility": "r",
+      "admitted": "2026-11-05",
+      "discharged": "2026-11-08",
+      "outcome": "transfer",
+      "recorded": "2026-11-08"
+    },
+    {
+      "id": "v3",
+      "person": "p1",
+      "facility": "h",
+      "admitted": "2026-11-09",
+      "discharged": null,
+      "outcome": null,
+      "recorded": "2026-11-09"
+    },
+    {
+      "id": "v4",
+      "person": "p2",
+      "facility": "a",
+      "admitted": "2026-11-02",
+      "discharged": "2026-11-04",
+      "outcome": "transfer",
+      "recorded": "2026-11-04"
+    },
+    {
+      "id": "v5",
+      "person": "p3",
+      "facility": "a",
+      "admitted": "2026-11-01",
+      "discharged": "2026-11-02",
+      "outcome": "completed",
+      "recorded": "2026-11-02"
+    },
+    {
+      "id": "v6",
+      "person": "p3",
+      "facility": "r",
+      "admitted": "2026-11-08",
+      "discharged": "2026-11-10",
+      "outcome": "completed",
+      "recorded": "2026-11-10"
+    },
+    {
+      "id": "v7",
+      "person": "p4",
+      "facility": "a",
+      "admitted": "2026-11-03",
+      "discharged": "2026-11-04",
+      "outcome": "death",
+      "recorded": "2026-11-04"
+    },
+    {
+      "id": "v8",
+      "person": "p5",
+      "facility": "p",
+      "admitted": "2026-11-01",
+      "discharged": null,
+      "outcome": null,
+      "recorded": "2026-11-01"
+    }
+  ],
+  "referrals": [
+    {
+      "id": "r1",
+      "person": "p1",
+      "source": "v1",
+      "target": "v2",
+      "requested": "2026-11-03",
+      "resolved": "2026-11-05",
+      "status": "accepted",
+      "destination_stage": "rehab",
+      "recorded": "2026-11-08"
+    },
+    {
+      "id": "r2",
+      "person": "p1",
+      "source": "v2",
+      "target": "v3",
+      "requested": "2026-11-08",
+      "resolved": "2026-11-09",
+      "status": "accepted",
+      "destination_stage": "home",
+      "recorded": "2026-11-09"
+    },
+    {
+      "id": "r3",
+      "person": "p2",
+      "source": "v4",
+      "target": null,
+      "requested": "2026-11-04",
+      "resolved": null,
+      "status": "pending",
+      "destination_stage": "rehab",
+      "recorded": "2026-11-04"
+    },
+    {
+      "id": "r4",
+      "person": "p4",
+      "source": "v7",
+      "target": null,
+      "requested": "2026-11-03",
+      "resolved": "2026-11-04",
+      "status": "cancelled",
+      "destination_stage": "rehab",
+      "recorded": "2026-11-04"
+    },
+    {
+      "id": "r5",
+      "person": "p5",
+      "source": "v8",
+      "target": null,
+      "requested": "2026-11-02",
+      "resolved": "2026-11-03",
+      "status": "declined",
+      "destination_stage": "home",
+      "recorded": "2026-11-03"
+    }
+  ]
+}
